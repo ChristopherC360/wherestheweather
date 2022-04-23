@@ -23,7 +23,7 @@ public class Location {
     @Column(name = "location_id")
     private int locationId;
 
-    @Column(name = "city_name")
+    @Column(name = "city")
     private String cityName;
 
     @Column(name = "state")

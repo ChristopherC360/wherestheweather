@@ -22,19 +22,20 @@ public class Weather {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column
-    private int id;
+    @Column(name = "weather_id")
+    private int weatherId;
 
-    private double temperature;
+    private int temperature;
 
     @Column(name = "wind_speed")
-    private double windSpeed;
+    private int windSpeed;
 
-    private double humidity;
+    private int humidity;
 
     private Date date;
 
     @ManyToOne
-    @JoinColumn(name = "location_id")
+    @JoinColumn(name = "zip_code")
     private Location location;
+
 }
